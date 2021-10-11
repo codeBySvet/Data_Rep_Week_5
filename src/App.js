@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // importing boostrap as required
 import { Navbar, Nav } from 'react-bootstrap'; //import required for nav bar elements
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; //import required for routing
 
+import { Read } from './components/read'; //importing read.js component
+import { Create } from './components/create'; //importing create.js component
+
 //Creating class for nav bar and rooting the components to be rendered on the page
 class App extends Component {
 
@@ -23,6 +26,8 @@ class App extends Component {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/header">Header</Nav.Link>
               <Nav.Link href="/footer">Footer</Nav.Link>
+              <Nav.Link href="/read">Movies</Nav.Link>
+              <Nav.Link href="/create">Create</Nav.Link>
             </Nav>
           </Navbar>
           <br />
@@ -33,6 +38,8 @@ class App extends Component {
             <Route path='/' component={Content} exact />
             <Route path='/header' component={Header}/>
             <Route path='/footer' component={Footer}/>
+            <Route path='/read' component={Read}/>
+            <Route path='/create' component={Create}/>
           </Switch>
         </div>
       </Router>
