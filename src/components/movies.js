@@ -4,6 +4,7 @@ import MovieItem from "./movieitem";
  class Movies extends Component{
 
     render() {
+       
             return this.props.movies.map((movie)=>{
                return <MovieItem movie={movie} key={movie.imdbID}></MovieItem>
 
